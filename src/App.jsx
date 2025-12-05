@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Shield, Lock, Unlock, AlertTriangle, CheckCircle, Award, Users, BookOpen, Terminal, Eye, EyeOff, Trophy, Target, Zap, Skull, Key, Bug, Sparkles, Siren, PartyPopper } from 'lucide-react';
 
-const NirdPlatform = () => {
+const HIKORNPlatform = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const [activeTab, setActiveTab] = useState('home');
   const [showVulnerability, setShowVulnerability] = useState(false);
@@ -14,11 +14,11 @@ const NirdPlatform = () => {
   const [terminalCommands, setTerminalCommands] = useState([]);
   const [terminalInput, setTerminalInput] = useState('');
 
-  // 🎭 L'histoire du Village NIRD
+  // 🎭 L'histoire du Village HIKORN
   const storyNarration = [
     {
       stage: 0,
-      title: "🏰 Bienvenue au Village NIRD",
+      title: "🏰 Bienvenue au Village HIKORN",
       text: "Vous entrez dans le village numérique résistant. Tout semble sécurisé... ou pas ? 🤔",
       emoji: "🏰"
     },
@@ -31,7 +31,7 @@ const NirdPlatform = () => {
     {
       stage: 2,
       title: "🎉 Bravo, Hacker !",
-      text: "BINGO ! Vous avez trouvé la faille ! Vous êtes maintenant un hacker éthique certifié du Village NIRD ! 🎓",
+      text: "BINGO ! Vous avez trouvé la faille ! Vous êtes maintenant un hacker éthique certifié du Village HIKORN ! 🎓",
       emoji: "🎉"
     }
   ];
@@ -39,7 +39,7 @@ const NirdPlatform = () => {
   const users = [
     { id: 1, username: 'student', password: 'pass123', role: 'student', points: 50, avatar: '👨‍🎓', quote: "J'apprends le code !" },
     { id: 2, username: 'teacher', password: 'teacher123', role: 'teacher', points: 150, avatar: '👩‍🏫', quote: "Enseigner, c'est apprendre deux fois." },
-    { id: 3, username: 'admin', password: 'admin123', role: 'admin', points: 500, avatar: '👨‍💼', secretData: 'FLAG{broken_access_control_discovered}', quote: "Avec un grand pouvoir vient une grande responsabilité.", secretVault: "🔐 Coffre-fort secret : Le trésor de NIRD est protégé... ou pas ?" }
+    { id: 3, username: 'admin', password: 'admin123', role: 'admin', points: 500, avatar: '👨‍💼', secretData: 'FLAG{broken_access_control_discovered}', quote: "Avec un grand pouvoir vient une grande responsabilité.", secretVault: "🔐 Coffre-fort secret : Le trésor de HIKORN est protégé... ou pas ?" }
   ];
 
   const handleLogin = (username, password) => {
@@ -115,7 +115,7 @@ const NirdPlatform = () => {
                 <Sparkles className="w-8 h-8 text-yellow-300 absolute -top-2 -right-2 animate-spin" />
               </div>
               <h1 className="text-4xl font-bold text-white mb-2 animate-fade-in">
-                🏰 Village NIRD
+                🏰 Village HIKORN
               </h1>
               <p className="text-purple-200 text-lg mb-4">Le Village Numérique Résistant</p>
               <div className="bg-yellow-400/20 border-2 border-yellow-400 rounded-lg p-3 mb-4">
@@ -280,7 +280,7 @@ const NirdPlatform = () => {
               <div className="flex items-center space-x-4">
                 <div className="text-4xl">{currentUser?.avatar}</div>
                 <div>
-                  <h1 className="text-2xl font-bold">Village NIRD</h1>
+                  <h1 className="text-2xl font-bold">Village HIKORN</h1>
                   <p className="text-sm text-purple-200">{currentUser?.username} - {currentUser?.role}</p>
                 </div>
               </div>
@@ -530,7 +530,7 @@ const NirdPlatform = () => {
           {activeTab === 'security' && (
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-xl shadow-2xl">
-                <h2 className="text-3xl font-bold mb-2">🎓 École de Sécurité NIRD</h2>
+                <h2 className="text-3xl font-bold mb-2">🎓 École de Sécurité HIKORN</h2>
                 <p className="text-purple-100">Comprenez la faille et apprenez à vous protéger !</p>
               </div>
 
@@ -743,7 +743,7 @@ app.get('/api/user/:id',
 
           {activeTab === 'challenges' && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-800">🎯 Défis NIRD</h2>
+              <h2 className="text-2xl font-bold text-gray-800">🎯 Défis HIKORN</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
@@ -751,7 +751,7 @@ app.get('/api/user/:id',
                   { id: 'linux_migration', title: '🐧 Migration Linux', points: 150, icon: Terminal, color: 'blue', desc: 'Simulez une migration vers Linux' },
                   { id: 'waste_calc', title: '🌱 Empreinte Carbone', points: 80, icon: Zap, color: 'green', desc: 'Calculez votre impact numérique' },
                   { id: 'resource_share', title: '📚 Partage de Ressource', points: 120, icon: BookOpen, color: 'purple', desc: 'Partagez une ressource libre' },
-                  { id: 'community', title: '👥 Rejoindre NIRD', points: 50, icon: Users, color: 'yellow', desc: 'Devenez membre actif' },
+                  { id: 'community', title: '👥 Rejoindre HIKORN', points: 50, icon: Users, color: 'yellow', desc: 'Devenez membre actif' },
                 ].map((challenge) => (
                   <div
                     key={challenge.id}
@@ -794,4 +794,4 @@ app.get('/api/user/:id',
   return <DashboardScreen />;
 };
 
-export default NirdPlatform;
+export default HIKORNPlatform;
